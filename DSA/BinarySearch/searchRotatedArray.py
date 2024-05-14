@@ -1,4 +1,18 @@
 def search(nums:list, target: int) -> int:
+    """
+        Searches for the target integer in the rotated sorted array 'nums'.
+
+        Args:
+        - nums: A list of integers representing the rotated sorted array.
+        - target: An integer to be searched in the array.
+
+        Returns:
+        - int: The index of the target if it is found, otherwise -1.
+
+        Time complexity:
+        O(log n) - The binary search is performed with logarithmic time complexity.
+        """
+
     left, right = 0, len(nums) - 1
 
     while left <= right:
