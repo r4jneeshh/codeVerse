@@ -9,6 +9,19 @@ def search(nums:list, target: int) -> int:
         Returns:
         - int: The index of the target if it is found, otherwise -1.
 
+        Algorithm:
+        The function implements binary search with modifications to handle rotated arrays.
+        - Initialize left and right pointers to the start and end of the array.
+        - While left <= right:
+            - Calculate the mid index.
+            - If array[mid] equals key, return True.
+            - If the left half of the array is sorted:
+                - If the key is within the range of the left half, search left.
+                - Otherwise, search right.
+            - If the right half of the array is sorted:
+                - If the key is within the range of the right half, search right.
+                - Otherwise, search left.
+
         Time complexity:
         O(log n) - The binary search is performed with logarithmic time complexity.
         """
